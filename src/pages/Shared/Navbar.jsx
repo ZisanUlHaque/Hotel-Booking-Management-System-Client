@@ -1,17 +1,17 @@
 import React from "react";
 import { Link, NavLink } from "react-router";
 import Logo from "../../Components/logo";
-import useAuth from "../../hooks/useAuth";
-import userimg from "../../assets/user.png";
+
+// import userimg from "../../assets/user.png";
 
 const Navbar = () => {
-  const { user, logOut } = useAuth();
+  // const { user, logOut } = useAuth();
 
-  const handleLogout = () => {
-    logOut().catch((error) => {
-      console.log(error);
-    });
-  };
+  // const handleLogout = () => {
+  //   logOut().catch((error) => {
+  //     console.log(error);
+  //   });
+  // };
 
   const links = (
     <>
@@ -19,11 +19,11 @@ const Navbar = () => {
         <NavLink to="/donation-requests" className="text-red-900 font-semibold">Donation Requests</NavLink>
       </li>
 
-      {user && (
+      {/* {user && (
         <li>
           <NavLink to="/funding" className="text-red-900 font-semibold">Funding</NavLink>
         </li>
-      )}
+      )} */}
     </>
   );
 
@@ -73,7 +73,7 @@ const Navbar = () => {
       <div className="navbar-end">
         <div className="flex items-center gap-4">
           
-          {!user && (
+          {/* {!user && (
             <>
               <Link className="btn btn-primary" to="/login">
                 Login
@@ -82,9 +82,9 @@ const Navbar = () => {
                 <img src={userimg} alt="Default Avatar" />
               </div>
             </>
-          )}
+          )} */}
 
-          {user && (
+          {/* {user && (
             <div className="dropdown dropdown-end">
               <label
                 tabIndex={0}
@@ -109,7 +109,7 @@ const Navbar = () => {
                 </li>
               </ul>
             </div>
-          )}
+          )} */}
         </div>
       </div>
     </div>
