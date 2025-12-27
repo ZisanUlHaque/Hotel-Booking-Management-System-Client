@@ -12,7 +12,7 @@ const Logo = () => {
           className="text-3xl font-bold"
           style={{ color: "oklch(87.9% 0.169 91.605)" }}
         >
-          Restify
+          Travelio
         </h3>
       </div>
     </Link>
