@@ -1,0 +1,859 @@
+[
+  {
+    "id": 1,
+    "country": "Italy",
+    "city": "Rome",
+    "title": "Historic Rome Tour",
+    "description": "Explore the ancient wonders of Rome, from the iconic Colosseum to the Vatican City. Walk through centuries of history in the Eternal City.",
+    "duration": "5 Days",
+    "price": 1200,
+    "originalPrice": 1500,
+    "discount": 20,
+    "image": "https://i.ibb.co.com/ymkj5r1K/pexels-meperdinaviagem-2064827.jpg",
+    "gallery": [
+      "https://images.pexels.com/photos/2064827/pexels-photo-2064827.jpeg",
+      "https://images.pexels.com/photos/2676642/pexels-photo-2676642.jpeg",
+      "https://images.pexels.com/photos/1797161/pexels-photo-1797161.jpeg"
+    ],
+    "rating": 4.8,
+    "totalReviews": 245,
+    "category": "Cultural",
+    "difficulty": "Easy",
+    "maxGroupSize": 15,
+    "minAge": 8,
+    "languages": ["English", "Italian", "Spanish"],
+    "highlights": [
+      "Visit the Colosseum & Roman Forum",
+      "Explore Vatican City & Sistine Chapel",
+      "Toss a coin in Trevi Fountain",
+      "Walk through Piazza Navona",
+      "Enjoy authentic Italian cuisine"
+    ],
+    "included": [
+      "4 Nights Hotel Accommodation",
+      "Daily Breakfast",
+      "Airport Transfers",
+      "Professional Tour Guide",
+      "All Entry Tickets",
+      "Free WiFi"
+    ],
+    "excluded": [
+      "International Flights",
+      "Travel Insurance",
+      "Personal Expenses",
+      "Lunch & Dinner"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Arrival in Rome",
+        "description": "Arrive at Rome airport, transfer to hotel. Evening walking tour of the city center.",
+        "meals": ["Dinner"]
+      },
+      {
+        "day": 2,
+        "title": "Colosseum & Ancient Rome",
+        "description": "Full day exploring the Colosseum, Roman Forum, and Palatine Hill.",
+        "meals": ["Breakfast", "Lunch"]
+      },
+      {
+        "day": 3,
+        "title": "Vatican City",
+        "description": "Visit St. Peter's Basilica, Vatican Museums, and the Sistine Chapel.",
+        "meals": ["Breakfast"]
+      },
+      {
+        "day": 4,
+        "title": "City Exploration",
+        "description": "Visit Trevi Fountain, Spanish Steps, and Piazza Navona. Shopping time.",
+        "meals": ["Breakfast", "Dinner"]
+      },
+      {
+        "day": 5,
+        "title": "Departure",
+        "description": "Free morning for last-minute shopping. Transfer to airport.",
+        "meals": ["Breakfast"]
+      }
+    ],
+    "reviews": [
+      {
+        "id": 1,
+        "user": "John Smith",
+        "avatar": "https://randomuser.me/api/portraits/men/1.jpg",
+        "rating": 5,
+        "date": "2024-12-15",
+        "comment": "Amazing experience! The guide was very knowledgeable."
+      },
+      {
+        "id": 2,
+        "user": "Sarah Johnson",
+        "avatar": "https://randomuser.me/api/portraits/women/2.jpg",
+        "rating": 4,
+        "date": "2024-11-20",
+        "comment": "Great tour, well organized. Would recommend!"
+      }
+    ],
+    "startDates": ["2025-03-15", "2025-04-10", "2025-05-05", "2025-06-20"],
+    "tourGuide": {
+      "name": "Marco Rossi",
+      "avatar": "https://randomuser.me/api/portraits/men/32.jpg",
+      "experience": "8 years",
+      "languages": ["English", "Italian"],
+      "rating": 4.9
+    },
+    "location": {
+      "lat": 41.9028,
+      "lng": 12.4964,
+      "meetingPoint": "Rome Fiumicino Airport (FCO)"
+    },
+    "isFeatured": true,
+    "isPopular": true,
+    "availableSpots": 8
+  },
+  {
+    "id": 2,
+    "country": "France",
+    "city": "Paris",
+    "title": "Romantic Paris Getaway",
+    "description": "Experience the magic of Paris, the city of love. From the Eiffel Tower to charming cafes, discover why Paris captures hearts worldwide.",
+    "duration": "4 Days",
+    "price": 1350,
+    "originalPrice": 1600,
+    "discount": 15,
+    "image": "https://i.ibb.co.com/5WJ7tJTG/pexels-photo-338515.jpg",
+    "gallery": [
+      "https://images.pexels.com/photos/338515/pexels-photo-338515.jpeg",
+      "https://images.pexels.com/photos/699466/pexels-photo-699466.jpeg",
+      "https://images.pexels.com/photos/1308940/pexels-photo-1308940.jpeg"
+    ],
+    "rating": 4.9,
+    "totalReviews": 320,
+    "category": "Romantic",
+    "difficulty": "Easy",
+    "maxGroupSize": 12,
+    "minAge": 10,
+    "languages": ["English", "French"],
+    "highlights": [
+      "Eiffel Tower sunset visit",
+      "Louvre Museum guided tour",
+      "Seine River cruise",
+      "Montmartre walking tour",
+      "French wine tasting"
+    ],
+    "included": [
+      "3 Nights Boutique Hotel",
+      "Daily Breakfast",
+      "Seine River Cruise",
+      "Louvre Skip-the-line Tickets",
+      "Professional Guide"
+    ],
+    "excluded": [
+      "International Flights",
+      "Travel Insurance",
+      "Personal Expenses"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Bonjour Paris!",
+        "description": "Arrival, hotel check-in, evening Eiffel Tower visit.",
+        "meals": ["Dinner"]
+      },
+      {
+        "day": 2,
+        "title": "Art & Culture",
+        "description": "Louvre Museum, Tuileries Garden, Champs-Élysées.",
+        "meals": ["Breakfast", "Lunch"]
+      },
+      {
+        "day": 3,
+        "title": "Montmartre & Seine",
+        "description": "Sacré-Cœur, artist quarter, evening river cruise.",
+        "meals": ["Breakfast", "Dinner"]
+      },
+      {
+        "day": 4,
+        "title": "Au Revoir",
+        "description": "Free morning, departure.",
+        "meals": ["Breakfast"]
+      }
+    ],
+    "reviews": [
+      {
+        "id": 1,
+        "user": "Emily Davis",
+        "avatar": "https://randomuser.me/api/portraits/women/3.jpg",
+        "rating": 5,
+        "date": "2024-12-10",
+        "comment": "Perfect romantic getaway! Everything was magical."
+      }
+    ],
+    "startDates": ["2025-02-14", "2025-04-01", "2025-05-15"],
+    "tourGuide": {
+      "name": "Sophie Martin",
+      "avatar": "https://randomuser.me/api/portraits/women/44.jpg",
+      "experience": "6 years",
+      "languages": ["English", "French"],
+      "rating": 4.9
+    },
+    "location": {
+      "lat": 48.8566,
+      "lng": 2.3522,
+      "meetingPoint": "Paris Charles de Gaulle Airport"
+    },
+    "isFeatured": true,
+    "isPopular": true,
+    "availableSpots": 5
+  },
+  {
+    "id": 3,
+    "country": "Turkey",
+    "city": "Istanbul",
+    "title": "Istanbul Cultural Experience",
+    "description": "Where East meets West. Explore magnificent mosques, bustling bazaars, and taste incredible Turkish cuisine.",
+    "duration": "6 Days",
+    "price": 950,
+    "originalPrice": 1100,
+    "discount": 14,
+    "image": "https://i.ibb.co.com/PzjFSF17/pexels-semanur-biber-12654341-11597784.jpg",
+    "gallery": [],
+    "rating": 4.7,
+    "totalReviews": 189,
+    "category": "Cultural",
+    "difficulty": "Easy",
+    "maxGroupSize": 20,
+    "minAge": 6,
+    "languages": ["English", "Turkish"],
+    "highlights": [
+      "Hagia Sophia & Blue Mosque",
+      "Grand Bazaar shopping",
+      "Bosphorus boat cruise",
+      "Turkish bath experience",
+      "Street food tour"
+    ],
+    "included": [
+      "5 Nights Hotel",
+      "Daily Breakfast",
+      "Bosphorus Cruise",
+      "All Entry Tickets",
+      "Local Guide"
+    ],
+    "excluded": [
+      "Flights",
+      "Travel Insurance",
+      "Personal Expenses",
+      "Optional Activities"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Welcome to Istanbul",
+        "description": "Airport pickup, hotel check-in, welcome dinner.",
+        "meals": ["Dinner"]
+      },
+      {
+        "day": 2,
+        "title": "Old City Tour",
+        "description": "Hagia Sophia, Blue Mosque, Hippodrome.",
+        "meals": ["Breakfast", "Lunch"]
+      },
+      {
+        "day": 3,
+        "title": "Palaces & Bazaars",
+        "description": "Topkapi Palace, Grand Bazaar.",
+        "meals": ["Breakfast"]
+      },
+      {
+        "day": 4,
+        "title": "Bosphorus Experience",
+        "description": "Boat cruise, Asian side exploration.",
+        "meals": ["Breakfast", "Dinner"]
+      },
+      {
+        "day": 5,
+        "title": "Hidden Gems",
+        "description": "Local neighborhoods, Turkish bath, street food.",
+        "meals": ["Breakfast", "Lunch"]
+      },
+      {
+        "day": 6,
+        "title": "Departure",
+        "description": "Free time, airport transfer.",
+        "meals": ["Breakfast"]
+      }
+    ],
+    "reviews": [],
+    "startDates": ["2025-03-20", "2025-04-25", "2025-06-10"],
+    "tourGuide": {
+      "name": "Ahmet Yilmaz",
+      "avatar": "https://randomuser.me/api/portraits/men/45.jpg",
+      "experience": "10 years",
+      "languages": ["English", "Turkish", "Arabic"],
+      "rating": 4.8
+    },
+    "location": {
+      "lat": 41.0082,
+      "lng": 28.9784,
+      "meetingPoint": "Istanbul Airport"
+    },
+    "isFeatured": false,
+    "isPopular": true,
+    "availableSpots": 12
+  },
+  {
+    "id": 4,
+    "country": "Bangladesh",
+    "city": "Cox's Bazar",
+    "title": "Beach Escape Cox's Bazar",
+    "description": "Visit the world's longest natural sea beach. Experience stunning sunsets, fresh seafood, and warm Bengali hospitality.",
+    "duration": "3 Days",
+    "price": 400,
+    "originalPrice": 500,
+    "discount": 20,
+    "image": "https://i.ibb.co.com/TxxkRQXr/pexels-sergk1-14789774.jpg",
+    "gallery": [],
+    "rating": 4.5,
+    "totalReviews": 156,
+    "category": "Beach",
+    "difficulty": "Easy",
+    "maxGroupSize": 25,
+    "minAge": 5,
+    "languages": ["English", "Bengali"],
+    "highlights": [
+      "World's longest beach",
+      "Inani Beach visit",
+      "Himchari waterfall",
+      "Fresh seafood dinner",
+      "Sunrise beach walk"
+    ],
+    "included": [
+      "2 Nights Beach Resort",
+      "All Meals",
+      "AC Transport",
+      "Local Guide",
+      "All Activities"
+    ],
+    "excluded": [
+      "Personal Expenses",
+      "Water Sports",
+      "Travel Insurance"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Journey to Paradise",
+        "description": "Arrive at Cox's Bazar, beach sunset.",
+        "meals": ["Lunch", "Dinner"]
+      },
+      {
+        "day": 2,
+        "title": "Beach Exploration",
+        "description": "Inani Beach, Himchari, Marine Drive.",
+        "meals": ["Breakfast", "Lunch", "Dinner"]
+      },
+      {
+        "day": 3,
+        "title": "Farewell",
+        "description": "Sunrise walk, departure.",
+        "meals": ["Breakfast"]
+      }
+    ],
+    "reviews": [],
+    "startDates": ["2025-01-10", "2025-02-15", "2025-03-20", "2025-11-15"],
+    "tourGuide": {
+      "name": "Rafiq Ahmed",
+      "avatar": "https://randomuser.me/api/portraits/men/50.jpg",
+      "experience": "5 years",
+      "languages": ["English", "Bengali"],
+      "rating": 4.6
+    },
+    "location": {
+      "lat": 21.4272,
+      "lng": 92.0058,
+      "meetingPoint": "Cox's Bazar Airport"
+    },
+    "isFeatured": true,
+    "isPopular": false,
+    "availableSpots": 20
+  },
+  {
+    "id": 5,
+    "country": "United Kingdom",
+    "city": "London",
+    "title": "London City Highlights",
+    "description": "Discover the best of London - from Buckingham Palace to the Tower of London. Experience British culture at its finest.",
+    "duration": "5 Days",
+    "price": 1500,
+    "originalPrice": 1800,
+    "discount": 17,
+    "image": "https://i.ibb.co.com/ccvRLKNx/pexels-clickerhappy-19972.jpg",
+    "gallery": [],
+    "rating": 4.8,
+    "totalReviews": 278,
+    "category": "Cultural",
+    "difficulty": "Easy",
+    "maxGroupSize": 15,
+    "minAge": 8,
+    "languages": ["English"],
+    "highlights": [
+      "Buckingham Palace & Changing of Guard",
+      "Tower of London & Crown Jewels",
+      "London Eye experience",
+      "Harry Potter Studio Tour",
+      "Thames River Cruise"
+    ],
+    "included": [
+      "4 Nights Central Hotel",
+      "Daily English Breakfast",
+      "Oyster Card (Transport)",
+      "All Entry Tickets",
+      "Professional Guide"
+    ],
+    "excluded": [
+      "International Flights",
+      "Travel Insurance",
+      "Lunches & Dinners"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Welcome to London",
+        "description": "Arrival, Westminster walking tour.",
+        "meals": ["Dinner"]
+      },
+      {
+        "day": 2,
+        "title": "Royal London",
+        "description": "Buckingham Palace, Big Ben, Westminster Abbey.",
+        "meals": ["Breakfast"]
+      },
+      {
+        "day": 3,
+        "title": "Historic London",
+        "description": "Tower of London, Tower Bridge, Thames Cruise.",
+        "meals": ["Breakfast", "Lunch"]
+      },
+      {
+        "day": 4,
+        "title": "Harry Potter Experience",
+        "description": "Warner Bros Studio Tour, Camden Market.",
+        "meals": ["Breakfast"]
+      },
+      {
+        "day": 5,
+        "title": "Cheerio!",
+        "description": "British Museum, departure.",
+        "meals": ["Breakfast"]
+      }
+    ],
+    "reviews": [],
+    "startDates": ["2025-04-05", "2025-05-20", "2025-07-10"],
+    "tourGuide": {
+      "name": "James Wilson",
+      "avatar": "https://randomuser.me/api/portraits/men/55.jpg",
+      "experience": "12 years",
+      "languages": ["English"],
+      "rating": 4.9
+    },
+    "location": {
+      "lat": 51.5074,
+      "lng": -0.1278,
+      "meetingPoint": "London Heathrow Airport"
+    },
+    "isFeatured": true,
+    "isPopular": true,
+    "availableSpots": 6
+  },
+  {
+    "id": 6,
+    "country": "Spain",
+    "city": "Barcelona",
+    "title": "Barcelona City Break",
+    "description": "Experience Gaudí's masterpieces, delicious tapas, and vibrant nightlife in Spain's most exciting city.",
+    "duration": "4 Days",
+    "price": 1100,
+    "originalPrice": 1300,
+    "discount": 15,
+    "image": "https://i.ibb.co.com/7tb74sNw/pexels-pixabay-34532.jpg",
+    "gallery": [],
+    "rating": 4.7,
+    "totalReviews": 198,
+    "category": "Cultural",
+    "difficulty": "Easy",
+    "maxGroupSize": 18,
+    "minAge": 10,
+    "languages": ["English", "Spanish"],
+    "highlights": [
+      "Sagrada Família guided tour",
+      "Park Güell exploration",
+      "Gothic Quarter walk",
+      "La Boqueria food tour",
+      "Flamenco show"
+    ],
+    "included": [
+      "3 Nights Hotel",
+      "Daily Breakfast",
+      "Sagrada Família Tickets",
+      "Flamenco Show",
+      "Local Guide"
+    ],
+    "excluded": [
+      "Flights",
+      "Travel Insurance",
+      "Personal Expenses"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Hola Barcelona!",
+        "description": "Arrival, Gothic Quarter evening walk.",
+        "meals": ["Dinner"]
+      },
+      {
+        "day": 2,
+        "title": "Gaudí Day",
+        "description": "Sagrada Família, Park Güell, Casa Batlló.",
+        "meals": ["Breakfast", "Lunch"]
+      },
+      {
+        "day": 3,
+        "title": "Culture & Food",
+        "description": "La Boqueria, beach, Flamenco show.",
+        "meals": ["Breakfast", "Dinner"]
+      },
+      {
+        "day": 4,
+        "title": "Adiós",
+        "description": "Free morning, departure.",
+        "meals": ["Breakfast"]
+      }
+    ],
+    "reviews": [],
+    "startDates": ["2025-03-25", "2025-05-10", "2025-09-15"],
+    "tourGuide": {
+      "name": "Carlos García",
+      "avatar": "https://randomuser.me/api/portraits/men/60.jpg",
+      "experience": "7 years",
+      "languages": ["English", "Spanish", "Catalan"],
+      "rating": 4.7
+    },
+    "location": {
+      "lat": 41.3851,
+      "lng": 2.1734,
+      "meetingPoint": "Barcelona El Prat Airport"
+    },
+    "isFeatured": false,
+    "isPopular": true,
+    "availableSpots": 10
+  },
+  {
+    "id": 7,
+    "country": "USA",
+    "city": "New York",
+    "title": "New York Explorer Tour",
+    "description": "The city that never sleeps awaits! From Times Square to Central Park, experience the energy of NYC.",
+    "duration": "6 Days",
+    "price": 1800,
+    "originalPrice": 2200,
+    "discount": 18,
+    "image": "https://i.ibb.co.com/zhJxgCSG/pexels-photo-466685.jpg",
+    "gallery": [],
+    "rating": 4.9,
+    "totalReviews": 412,
+    "category": "City",
+    "difficulty": "Easy",
+    "maxGroupSize": 20,
+    "minAge": 10,
+    "languages": ["English"],
+    "highlights": [
+      "Statue of Liberty & Ellis Island",
+      "Times Square & Broadway Show",
+      "Central Park bike tour",
+      "Empire State Building",
+      "Brooklyn Bridge walk"
+    ],
+    "included": [
+      "5 Nights Manhattan Hotel",
+      "Daily Breakfast",
+      "Statue of Liberty Tickets",
+      "Broadway Show Ticket",
+      "Subway Pass"
+    ],
+    "excluded": [
+      "International Flights",
+      "Travel Insurance",
+      "Meals (except breakfast)"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Welcome to NYC",
+        "description": "Arrival, Times Square evening walk.",
+        "meals": ["Dinner"]
+      },
+      {
+        "day": 2,
+        "title": "Lady Liberty",
+        "description": "Statue of Liberty, Ellis Island, Wall Street.",
+        "meals": ["Breakfast"]
+      },
+      {
+        "day": 3,
+        "title": "Manhattan Icons",
+        "description": "Empire State, 5th Avenue, Central Park.",
+        "meals": ["Breakfast", "Lunch"]
+      },
+      {
+        "day": 4,
+        "title": "Brooklyn Vibes",
+        "description": "Brooklyn Bridge, DUMBO, pizza tour.",
+        "meals": ["Breakfast"]
+      },
+      {
+        "day": 5,
+        "title": "Broadway Magic",
+        "description": "Museums, shopping, Broadway show.",
+        "meals": ["Breakfast", "Dinner"]
+      },
+      {
+        "day": 6,
+        "title": "Goodbye NYC",
+        "description": "Free morning, departure.",
+        "meals": ["Breakfast"]
+      }
+    ],
+    "reviews": [],
+    "startDates": ["2025-04-15", "2025-06-01", "2025-09-20", "2025-12-20"],
+    "tourGuide": {
+      "name": "Mike Thompson",
+      "avatar": "https://randomuser.me/api/portraits/men/65.jpg",
+      "experience": "15 years",
+      "languages": ["English", "Spanish"],
+      "rating": 4.9
+    },
+    "location": {
+      "lat": 40.7128,
+      "lng": -74.0060,
+      "meetingPoint": "JFK International Airport"
+    },
+    "isFeatured": true,
+    "isPopular": true,
+    "availableSpots": 4
+  },
+  {
+    "id": 8,
+    "country": "Japan",
+    "city": "Tokyo",
+    "title": "Tokyo Modern Life Tour",
+    "description": "Experience the perfect blend of ancient traditions and futuristic technology in Japan's incredible capital.",
+    "duration": "7 Days",
+    "price": 2000,
+    "originalPrice": 2500,
+    "discount": 20,
+    "image": "https://i.ibb.co.com/zVDx9t54/pexels-photo-208701.jpg",
+    "gallery": [],
+    "rating": 4.9,
+    "totalReviews": 356,
+    "category": "Cultural",
+    "difficulty": "Moderate",
+    "maxGroupSize": 12,
+    "minAge": 12,
+    "languages": ["English", "Japanese"],
+    "highlights": [
+      "Senso-ji Temple visit",
+      "Shibuya Crossing experience",
+      "Mount Fuji day trip",
+      "Traditional tea ceremony",
+      "Tsukiji fish market tour",
+      "Anime & gaming district"
+    ],
+    "included": [
+      "6 Nights Hotel",
+      "Daily Breakfast",
+      "JR Pass (7 days)",
+      "Mount Fuji Tour",
+      "Tea Ceremony",
+      "Expert Guide"
+    ],
+    "excluded": [
+      "International Flights",
+      "Travel Insurance",
+      "Personal Expenses"
+    ],
+    "itinerary": [
+      {
+        "day": 1,
+        "title": "Konnichiwa Tokyo!",
+        "description": "Arrival, Shinjuku evening exploration.",
+        "meals": ["Dinner"]
+      },
+      {
+        "day": 2,
+        "title": "Traditional Tokyo",
+        "description": "Senso-ji, Ueno Park, tea ceremony.",
+        "meals": ["Breakfast", "Lunch"]
+      },
+      {
+        "day": 3,
+        "title": "Modern Tokyo",
+        "description": "Shibuya, Harajuku, Akihabara.",
+        "meals": ["Breakfast"]
+      },
+      {
+        "day": 4,
+        "title": "Mount Fuji Adventure",
+        "description": "Full day trip to Mount Fuji.",
+        "meals": ["Breakfast", "Lunch"]
+      },
+      {
+        "day": 5,
+        "title": "Tsukiji & Shopping",
+        "description": "Fish market, Ginza, Tokyo Tower.",
+        "meals": ["Breakfast", "Dinner"]
+      },
+      {
+        "day": 6,
+        "title": "Day Trip Options",
+        "description": "Choose: Kyoto, Nikko, or free day.",
+        "meals": ["Breakfast"]
+      },
+      {
+        "day": 7,
+        "title": "Sayonara",
+        "description": "Last-minute shopping, departure.",
+        "meals": ["Breakfast"]
+      }
+    ],
+    "reviews": [],
+    "startDates": ["2025-03-25", "2025-04-01", "2025-10-15", "2025-11-20"],
+    "tourGuide": {
+      "name": "Yuki Tanaka",
+      "avatar": "https://randomuser.me/api/portraits/women/70.jpg",
+      "experience": "9 years",
+      "languages": ["English", "Japanese"],
+      "rating": 5.0
+    },
+    "location": {
+      "lat": 35.6762,
+      "lng": 139.6503,
+      "meetingPoint": "Tokyo Narita Airport"
+    },
+    "isFeatured": true,
+    "isPopular": true,
+    "availableSpots": 3
+  },
+  {
+    "id": 9,
+    "country": "Thailand",
+    "city": "Bangkok",
+    "title": "Bangkok City Adventure",
+    "description": "Discover the vibrant Thai capital with its golden temples, floating markets, and incredible street food.",
+    "duration": "5 Days",
+    "price": 850,
+    "originalPrice": 1000,
+    "discount": 15,
+    "image": "https://images.pexels.com/photos/373249/pexels-photo-373249.jpeg",
+    "gallery": [],
+    "rating": 4.6,
+    "totalReviews": 234,
+    "category": "Adventure",
+    "difficulty": "Easy",
+    "maxGroupSize": 20,
+    "minAge": 6,
+    "languages": ["English", "Thai"],
+    "highlights": [
+      "Grand Palace & Wat Phra Kaew",
+      "Floating market tour",
+      "Street food adventure",
+      "Chao Phraya river cruise",
+      "Thai cooking class"
+    ],
+    "included": [
+      "4 Nights Hotel",
+      "Daily Breakfast",
+      "Floating Market Tour",
+      "Cooking Class",
+      "River Cruise"
+    ],
+    "excluded": [
+      "Flights",
+      "Visa Fees",
+      "Travel Insurance"
+    ],
+    "itinerary": [],
+    "reviews": [],
+    "startDates": ["2025-02-10", "2025-04-20", "2025-11-05"],
+    "tourGuide": {
+      "name": "Somchai Phan",
+      "avatar": "https://randomuser.me/api/portraits/men/75.jpg",
+      "experience": "8 years",
+      "languages": ["English", "Thai", "Chinese"],
+      "rating": 4.7
+    },
+    "location": {
+      "lat": 13.7563,
+      "lng": 100.5018,
+      "meetingPoint": "Suvarnabhumi Airport"
+    },
+    "isFeatured": false,
+    "isPopular": true,
+    "availableSpots": 15
+  },
+  {
+    "id": 10,
+    "country": "UAE",
+    "city": "Dubai",
+    "title": "Luxury Dubai Tour",
+    "description": "Experience ultimate luxury in the city of superlatives. From the Burj Khalifa to desert safaris.",
+    "duration": "4 Days",
+    "price": 1600,
+    "originalPrice": 1900,
+    "discount": 16,
+    "image": "https://images.pexels.com/photos/2044434/pexels-photo-2044434.jpeg",
+    "gallery": [],
+    "rating": 4.8,
+    "totalReviews": 289,
+    "category": "Luxury",
+    "difficulty": "Easy",
+    "maxGroupSize": 10,
+    "minAge": 8,
+    "languages": ["English", "Arabic"],
+    "highlights": [
+      "Burj Khalifa observation deck",
+      "Desert safari with BBQ dinner",
+      "Dubai Mall & Fountain show",
+      "Palm Jumeirah tour",
+      "Gold & Spice Souk"
+    ],
+    "included": [
+      "3 Nights 5-Star Hotel",
+      "Daily Breakfast",
+      "Desert Safari",
+      "Burj Khalifa Tickets",
+      "Private Transfers"
+    ],
+    "excluded": [
+      "Flights",
+      "Travel Insurance",
+      "Optional Activities"
+    ],
+    "itinerary": [],
+    "reviews": [],
+    "startDates": ["2025-01-15", "2025-03-10", "2025-10-20"],
+    "tourGuide": {
+      "name": "Ahmed Hassan",
+      "avatar": "https://randomuser.me/api/portraits/men/80.jpg",
+      "experience": "6 years",
+      "languages": ["English", "Arabic", "Hindi"],
+      "rating": 4.8
+    },
+    "location": {
+      "lat": 25.2048,
+      "lng": 55.2708,
+      "meetingPoint": "Dubai International Airport"
+    },
+    "isFeatured": true,
+    "isPopular": true,
+    "availableSpots": 7
+  }
+]

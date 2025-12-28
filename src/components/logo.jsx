@@ -10,7 +10,7 @@ const Logo = () => {
         <img src={logo} alt="" className="h-13 w-13" />
         <h3
           className="text-3xl font-bold"
-          style={{ color: "oklch(87.9% 0.169 91.605)" }}
+          style={{ color: "oklch(76.9% 0.188 70.08)" }}
         >
           Travelio
         </h3>

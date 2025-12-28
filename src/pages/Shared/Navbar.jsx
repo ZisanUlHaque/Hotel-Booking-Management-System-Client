@@ -16,7 +16,7 @@ const Navbar = () => {
   const links = (
     <>
       <li>
-        <NavLink to="/donation-requests" className="text-red-900 font-semibold">Donation Requests</NavLink>
+        <NavLink to="/destination" className="text-primary font-semibold">Destination</NavLink>
       </li>
 
       {/* {user && (
