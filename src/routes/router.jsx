@@ -4,6 +4,8 @@ import Home from "../pages/Home/Home";
 import PopularDestination from "../pages/Home/PopularDestination";
 import Destination from "../pages/publicPage/Destination";
 import TourDetails from "../pages/Private/TourDetails";
+import AboutUs from "../pages/publicPage/AboutUs";
+import ContactUs from "../pages/publicPage/ContactUs";
 
 
 export const router = createBrowserRouter([
@@ -22,6 +24,15 @@ export const router = createBrowserRouter([
     path: "/destination",
     element: <Destination></Destination>,
     loader: () => fetch("/tours.json"),
+  },
+  {
+     path: "/about",
+  element: <AboutUs></AboutUs>
+  },
+  {
+     path: "/contact",
+  element: <ContactUs></ContactUs>
+
   },
   {
     path: "/tour/:id",
