@@ -23,7 +23,7 @@ const Footer = () => {
           {/* Brand / About */}
           <div>
             <h2 className="text-2xl font-bold text-white mb-3">
-              Travel<span className="text-primary">World</span>
+              Trave<span className="text-primary">lio</span>
             </h2>
             <p className="text-sm text-gray-400 mb-4">
               Discover unforgettable experiences around the world with curated 
