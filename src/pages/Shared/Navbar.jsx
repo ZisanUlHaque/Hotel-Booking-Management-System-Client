@@ -18,6 +18,7 @@ const Navbar = () => {
       <li>
         <NavLink to="/destination" className="text-primary font-semibold">Destination</NavLink>
         <NavLink to="/destination" className="text-primary font-semibold">Destination</NavLink>
+        <NavLink to="/destination" className="text-primary font-semibold">Destination</NavLink>
       </li>
 
       {/* {user && (
