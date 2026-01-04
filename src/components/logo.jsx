@@ -8,12 +8,9 @@ const Logo = () => {
     <Link to="/">
       <div className="flex items-center">
         <img src={logo} alt="" className="h-13 w-13" />
-        <h3
-          className="text-3xl font-bold"
-          style={{ color: "oklch(76.9% 0.188 70.08)" }}
-        >
-          Travelio
-        </h3>
+        <h2 className="text-3xl font-bold text-black mb-3">
+          Trave<span className="text-primary">lio</span>
+        </h2>
       </div>
     </Link>
   );
