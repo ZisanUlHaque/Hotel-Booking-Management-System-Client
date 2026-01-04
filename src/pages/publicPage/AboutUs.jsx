@@ -21,9 +21,9 @@ const AboutUs = () => {
   const teamMembers = [
     {
       id: 1,
-      name: "Sarah Johnson",
+      name: "Zisan UL Haque",
       role: "Founder & CEO",
-      image: "https://randomuser.me/api/portraits/women/44.jpg",
+      image: "https://i.ibb.co.com/HDtKF70V/411970404-1377305972871301-5165766417544768348-n.jpg",
       bio: "Travel enthusiast with 15+ years in tourism industry",
       social: { facebook: "#", twitter: "#", linkedin: "#" }
     },
@@ -31,7 +31,7 @@ const AboutUs = () => {
       id: 2,
       name: "Michael Chen",
       role: "Head of Operations",
-      image: "https://randomuser.me/api/portraits/men/32.jpg",
+      image: "https://i.ibb.co.com/nsbgdmDH/pexels-ferhat-kocakaya-218644751-35500783.jpg",
       bio: "Expert in creating seamless travel experiences",
       social: { facebook: "#", twitter: "#", linkedin: "#" }
     },
@@ -39,7 +39,7 @@ const AboutUs = () => {
       id: 3,
       name: "Emily Rodriguez",
       role: "Travel Curator",
-      image: "https://randomuser.me/api/portraits/women/68.jpg",
+      image: "https://i.ibb.co.com/JRtbC03G/pexels-olly-774909.jpg",
       bio: "Passionate about discovering hidden gems worldwide",
       social: { facebook: "#", twitter: "#", linkedin: "#" }
     },
@@ -47,7 +47,7 @@ const AboutUs = () => {
       id: 4,
       name: "David Kim",
       role: "Customer Success",
-      image: "https://randomuser.me/api/portraits/men/75.jpg",
+      image: "https://i.ibb.co.com/JRG7TJJW/pexels-jesus-rivera-2156773390-35485747.jpg",
       bio: "Dedicated to making every trip unforgettable",
       social: { facebook: "#", twitter: "#", linkedin: "#" }
     }

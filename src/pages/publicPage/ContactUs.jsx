@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import Navbar from "../Shared/Navbar";
-import { 
-  FaMapMarkerAlt, 
-  FaPhone, 
-  FaEnvelope, 
+
+import {
+  FaMapMarkerAlt,
+  FaPhone,
+  FaEnvelope,
   FaClock,
   FaFacebook,
   FaTwitter,
@@ -13,8 +14,9 @@ import {
   FaChevronDown,
   FaChevronUp,
   FaPaperPlane,
-  FaHeadset
+  FaHeadset,
 } from "react-icons/fa";
+import MapComponent from "./MapComponent";
 
 const ContactUs = () => {
   // Form State
@@ -23,7 +25,7 @@ const ContactUs = () => {
     email: "",
     phone: "",
     subject: "",
-    message: ""
+    message: "",
   });
 
   // FAQ State
@@ -32,9 +34,9 @@ const ContactUs = () => {
   // Handle Input Change
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
+      [name]: value,
     }));
   };
 
@@ -48,32 +50,35 @@ const ContactUs = () => {
       email: "",
       phone: "",
       subject: "",
-      message: ""
+      message: "",
     });
   };
 
-  // Contact Info Data
+  // Contact Info Data (you can localize if you want)
   const contactInfo = [
     {
       icon: <FaMapMarkerAlt className="text-2xl" />,
       title: "Our Office",
-      details: ["123 Travel Street, Suite 456", "New York, NY 10001, USA"]
+      details: ["Bogura Office", "Bogura, Bangladesh"],
     },
     {
       icon: <FaPhone className="text-2xl" />,
       title: "Phone Number",
-      details: ["+1 (555) 123-4567", "+1 (555) 987-6543"]
+      details: ["+880 1XXX-XXXXXX", "+880 1YYY-YYYYYY"],
     },
     {
       icon: <FaEnvelope className="text-2xl" />,
       title: "Email Address",
-      details: ["info@travelworld.com", "support@travelworld.com"]
+      details: ["info@travelworld.com", "support@travelworld.com"],
     },
     {
       icon: <FaClock className="text-2xl" />,
       title: "Working Hours",
-      details: ["Mon - Fri: 9:00 AM - 6:00 PM", "Sat - Sun: 10:00 AM - 4:00 PM"]
-    }
+      details: [
+        "Sat - Thu: 9:00 AM - 6:00 PM",
+        "Friday: 10:00 AM - 4:00 PM",
+      ],
+    },
   ];
 
   // FAQ Data
@@ -81,58 +86,64 @@ const ContactUs = () => {
     {
       id: 1,
       question: "How do I book a tour?",
-      answer: "You can book a tour directly through our website by selecting your desired destination, choosing a date, and completing the booking form. You can also call us or visit our office for assistance."
+      answer:
+        "You can book a tour directly through our website by selecting your desired destination, choosing a date, and completing the booking form. You can also call us or visit our office for assistance.",
     },
     {
       id: 2,
       question: "What is your cancellation policy?",
-      answer: "We offer free cancellation up to 24 hours before the tour start date. Cancellations made within 24 hours may be subject to a cancellation fee. Please refer to specific tour terms for details."
+      answer:
+        "We offer free cancellation up to 24 hours before the tour start date. Cancellations made within 24 hours may be subject to a cancellation fee. Please refer to specific tour terms for details.",
     },
     {
       id: 3,
       question: "Do you offer group discounts?",
-      answer: "Yes! We offer special discounts for groups of 10 or more travelers. Contact our team for a customized quote for your group."
+      answer:
+        "Yes! We offer special discounts for groups of 10 or more travelers. Contact our team for a customized quote for your group.",
     },
     {
       id: 4,
       question: "What payment methods do you accept?",
-      answer: "We accept all major credit cards (Visa, MasterCard, American Express), PayPal, bank transfers, and various digital payment options."
+      answer:
+        "We accept all major credit cards (Visa, MasterCard, American Express), PayPal, bank transfers, and various digital payment options.",
     },
     {
       id: 5,
       question: "Can I customize a tour package?",
-      answer: "Absolutely! We offer customizable tour packages to meet your specific needs. Contact us with your requirements and our travel experts will create a personalized itinerary."
+      answer:
+        "Absolutely! We offer customizable tour packages to meet your specific needs. Contact us with your requirements and our travel experts will create a personalized itinerary.",
     },
     {
       id: 6,
       question: "Is travel insurance included?",
-      answer: "Travel insurance is not included in our tour packages but we highly recommend it. We can help you find suitable travel insurance options."
-    }
+      answer:
+        "Travel insurance is not included in our tour packages but we highly recommend it. We can help you find suitable travel insurance options.",
+    },
   ];
 
   // Office Locations
   const offices = [
     {
+      city: "Bogura",
+      country: "Bangladesh",
+      address: "Bogura City Center",
+      phone: "+880 1XXX-XXXXXX",
+      image: "https://images.pexels.com/photos/5205083/pexels-photo-5205083.jpeg",
+    },
+    {
       city: "New York",
       country: "USA",
       address: "123 Travel Street, NY 10001",
       phone: "+1 (555) 123-4567",
-      image: "https://images.pexels.com/photos/466685/pexels-photo-466685.jpeg"
+      image: "https://images.pexels.com/photos/466685/pexels-photo-466685.jpeg",
     },
     {
       city: "London",
       country: "UK",
       address: "456 Journey Lane, W1 2AB",
       phone: "+44 20 1234 5678",
-      image: "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg"
+      image: "https://images.pexels.com/photos/460672/pexels-photo-460672.jpeg",
     },
-    {
-      city: "Dubai",
-      country: "UAE",
-      address: "789 Adventure Blvd, Dubai",
-      phone: "+971 4 123 4567",
-      image: "https://images.pexels.com/photos/2044434/pexels-photo-2044434.jpeg"
-    }
   ];
 
   return (
@@ -162,8 +173,8 @@ const ContactUs = () => {
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {contactInfo.map((info, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="bg-white p-6 rounded-2xl shadow-lg text-center"
               >
                 <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4 text-primary">
@@ -171,7 +182,9 @@ const ContactUs = () => {
                 </div>
                 <h3 className="font-bold text-gray-800 mb-2">{info.title}</h3>
                 {info.details.map((detail, i) => (
-                  <p key={i} className="text-gray-600 text-sm">{detail}</p>
+                  <p key={i} className="text-gray-600 text-sm">
+                    {detail}
+                  </p>
                 ))}
               </div>
             ))}
@@ -183,7 +196,6 @@ const ContactUs = () => {
       <section className="py-16 px-6">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            
             {/* Contact Form */}
             <div>
               <span className="text-primary font-medium">Get In Touch</span>
@@ -191,7 +203,8 @@ const ContactUs = () => {
                 Send Us a Message
               </h2>
               <p className="text-gray-600 mb-8">
-                Fill out the form below and our team will get back to you within 24 hours.
+                Fill out the form below and our team will get back to you within
+                24 hours.
               </p>
 
               <form onSubmit={handleSubmit} className="space-y-5">
@@ -240,7 +253,7 @@ const ContactUs = () => {
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
-                      placeholder="+1 (555) 000-0000"
+                      placeholder="+880 1XXX-XXXXXX"
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg 
                                 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
                     />
@@ -298,18 +311,15 @@ const ContactUs = () => {
 
             {/* Map & Quick Contact */}
             <div>
-              <div className="bg-gray-100 rounded-2xl overflow-hidden h-[300px] mb-6">
-                {/* You can replace this with actual Google Maps or Leaflet */}
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.15830869428!2d-74.11976397304605!3d40.69766374874431!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY%2C%20USA!5e0!3m2!1sen!2s!4v1650000000000!5m2!1sen!2s"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen=""
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="Office Location"
-                ></iframe>
+              {/* Bogura Map */}
+              <div className="rounded-2xl overflow-hidden h-[300px] mb-6 border">
+                <MapComponent
+                  lat={24.8465}
+                  lng={89.3778}
+                  meetingPoint="Bogura Office"
+                  city="Bogura"
+                  country="Bangladesh"
+                />
               </div>
 
               {/* Quick Contact Box */}
@@ -318,27 +328,29 @@ const ContactUs = () => {
                   <FaHeadset className="text-3xl" />
                   <div>
                     <h3 className="font-bold text-xl">Need Immediate Help?</h3>
-                    <p className="text-white/80 text-sm">Our support team is available 24/7</p>
+                    <p className="text-white/80 text-sm">
+                      Our support team is available 24/7
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="space-y-3">
-                  <a 
-                    href="tel:+15551234567" 
+                  <a
+                    href="tel:+8801XXXXXXXXX"
                     className="flex items-center gap-3 bg-white/10 p-3 rounded-lg"
                   >
                     <FaPhone />
-                    <span>+1 (555) 123-4567</span>
+                    <span>+880 1XXX-XXXXXX</span>
                   </a>
-                  <a 
-                    href="https://wa.me/15551234567" 
+                  <a
+                    href="https://wa.me/8801XXXXXXXXX"
                     className="flex items-center gap-3 bg-white/10 p-3 rounded-lg"
                   >
                     <FaWhatsapp />
                     <span>WhatsApp Chat</span>
                   </a>
-                  <a 
-                    href="mailto:support@travelworld.com" 
+                  <a
+                    href="mailto:support@travelworld.com"
                     className="flex items-center gap-3 bg-white/10 p-3 rounded-lg"
                   >
                     <FaEnvelope />
@@ -351,32 +363,32 @@ const ContactUs = () => {
               <div className="mt-6">
                 <p className="text-gray-700 font-medium mb-3">Follow Us</p>
                 <div className="flex gap-3">
-                  <a 
-                    href="#" 
+                  <a
+                    href="#"
                     className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center"
                   >
                     <FaFacebook className="text-xl" />
                   </a>
-                  <a 
-                    href="#" 
+                  <a
+                    href="#"
                     className="w-12 h-12 bg-sky-500 text-white rounded-full flex items-center justify-center"
                   >
                     <FaTwitter className="text-xl" />
                   </a>
-                  <a 
-                    href="#" 
+                  <a
+                    href="#"
                     className="w-12 h-12 bg-gradient-to-br from-purple-600 to-pink-500 text-white rounded-full flex items-center justify-center"
                   >
                     <FaInstagram className="text-xl" />
                   </a>
-                  <a 
-                    href="#" 
+                  <a
+                    href="#"
                     className="w-12 h-12 bg-blue-700 text-white rounded-full flex items-center justify-center"
                   >
                     <FaLinkedin className="text-xl" />
                   </a>
-                  <a 
-                    href="#" 
+                  <a
+                    href="#"
                     className="w-12 h-12 bg-green-500 text-white rounded-full flex items-center justify-center"
                   >
                     <FaWhatsapp className="text-xl" />
@@ -403,8 +415,8 @@ const ContactUs = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {offices.map((office, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="bg-white rounded-2xl overflow-hidden shadow-sm"
               >
                 <img
@@ -426,8 +438,8 @@ const ContactUs = () => {
                       {office.phone}
                     </p>
                   </div>
-                  <a 
-                    href="#" 
+                  <a
+                    href="#"
                     className="inline-block mt-4 text-primary font-medium"
                   >
                     Get Directions →
@@ -454,22 +466,26 @@ const ContactUs = () => {
 
           <div className="space-y-4">
             {faqs.map((faq) => (
-              <div 
-                key={faq.id} 
+              <div
+                key={faq.id}
                 className="bg-white border border-gray-200 rounded-xl overflow-hidden"
               >
                 <button
-                  onClick={() => setOpenFaq(openFaq === faq.id ? null : faq.id)}
+                  onClick={() =>
+                    setOpenFaq(openFaq === faq.id ? null : faq.id)
+                  }
                   className="w-full p-5 flex items-center justify-between text-left"
                 >
-                  <span className="font-medium text-gray-800">{faq.question}</span>
+                  <span className="font-medium text-gray-800">
+                    {faq.question}
+                  </span>
                   {openFaq === faq.id ? (
                     <FaChevronUp className="text-primary" />
                   ) : (
                     <FaChevronDown className="text-gray-400" />
                   )}
                 </button>
-                
+
                 {openFaq === faq.id && (
                   <div className="px-5 pb-5">
                     <p className="text-gray-600 border-t pt-4">{faq.answer}</p>
@@ -481,12 +497,15 @@ const ContactUs = () => {
 
           {/* Still Have Questions */}
           <div className="mt-10 text-center p-6 bg-gray-50 rounded-2xl">
-            <h3 className="font-bold text-gray-800 mb-2">Still Have Questions?</h3>
+            <h3 className="font-bold text-gray-800 mb-2">
+              Still Have Questions?
+            </h3>
             <p className="text-gray-600 mb-4">
-              Can't find the answer you're looking for? Please contact our support team.
+              Can't find the answer you're looking for? Please contact our
+              support team.
             </p>
-            <a 
-              href="mailto:support@travelworld.com" 
+            <a
+              href="mailto:support@travelworld.com"
               className="inline-block px-6 py-3 bg-primary text-white font-medium rounded-lg"
             >
               Contact Support
@@ -502,9 +521,10 @@ const ContactUs = () => {
             Subscribe to Our Newsletter
           </h2>
           <p className="text-white/80 mb-8 max-w-xl mx-auto">
-            Get the latest travel deals, tips, and destination guides delivered to your inbox.
+            Get the latest travel deals, tips, and destination guides delivered
+            to your inbox.
           </p>
-          
+
           <form className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
             <input
               type="email"
@@ -519,7 +539,7 @@ const ContactUs = () => {
               Subscribe
             </button>
           </form>
-          
+
           <p className="text-white/60 text-sm mt-4">
             We respect your privacy. Unsubscribe at any time.
           </p>
