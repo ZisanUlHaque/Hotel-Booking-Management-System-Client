@@ -14,6 +14,7 @@ import {
   FaInstagram,
   FaLinkedin
 } from "react-icons/fa";
+import Marquee from "react-fast-marquee";
 
 const AboutUs = () => {
 
@@ -458,18 +459,42 @@ const AboutUs = () => {
       </section>
 
       {/* Partners Section */}
-      <section className="py-12 px-6 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <p className="text-center text-gray-500 mb-8">Trusted by leading travel partners</p>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60">
-            <span className="text-2xl font-bold text-gray-400">TripAdvisor</span>
-            <span className="text-2xl font-bold text-gray-400">Booking.com</span>
-            <span className="text-2xl font-bold text-gray-400">Expedia</span>
-            <span className="text-2xl font-bold text-gray-400">Airbnb</span>
-            <span className="text-2xl font-bold text-gray-400">Skyscanner</span>
+    <section className="py-12 px-6 bg-gradient-to-r from-indigo-50 via-white to-pink-50">
+      <div className="max-w-7xl mx-auto">
+        <p className="text-center text-gray-600 mb-8 text-lg font-medium">
+          Trusted by leading travel partners
+        </p>
+
+        <Marquee
+          speed={60}
+          pauseOnHover
+          gradient
+          gradientColor={[255, 255, 255]}
+        >
+          <div className="flex items-center gap-20 mx-10">
+            <span className="text-3xl font-extrabold bg-gradient-to-r from-green-400 to-blue-500 bg-clip-text text-transparent hover:scale-110 transition">
+              TripAdvisor
+            </span>
+
+            <span className="text-3xl font-extrabold bg-gradient-to-r from-purple-500 to-pink-500 bg-clip-text text-transparent hover:scale-110 transition">
+              Booking.com
+            </span>
+
+            <span className="text-3xl font-extrabold bg-gradient-to-r from-orange-400 to-red-500 bg-clip-text text-transparent hover:scale-110 transition">
+              Expedia
+            </span>
+
+            <span className="text-3xl font-extrabold bg-gradient-to-r from-cyan-400 to-blue-600 bg-clip-text text-transparent hover:scale-110 transition">
+              Airbnb
+            </span>
+
+            <span className="text-3xl font-extrabold bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent hover:scale-110 transition">
+              Skyscanner
+            </span>
           </div>
-        </div>
-      </section>
+        </Marquee>
+      </div>
+    </section>
     </div>
   );
 };
