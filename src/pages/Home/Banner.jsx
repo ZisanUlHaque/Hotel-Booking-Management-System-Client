@@ -17,7 +17,7 @@ const slides = [
   },
   {
     id: 3, // Bangladesh
-    img: "https://i.ibb.co.com/TxxkRQXr/pexels-sergk1-14789774.jpg",
+    img: "https://i.ibb.co.com/KzwrHmmb/pexels-mo-eid-1268975-17877081.jpg",
     title: "Explore the Heart of Bangladesh",
     desc: "From lush green villages to rivers, beaches, and rich cultural heritage.",
   },
