@@ -161,7 +161,7 @@ const Footer = () => {
               <input
                 type="email"
                 placeholder="Your email"
-                className="flex-1 px-3 py-2 rounded-lg text-sm text-gray-900 
+                className="flex-1 px-3 py-2 rounded-lg text-sm text-white 
                            focus:outline-none focus:ring-2 focus:ring-primary"
                 required
               />

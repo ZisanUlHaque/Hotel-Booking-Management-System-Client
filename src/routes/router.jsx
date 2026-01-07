@@ -6,7 +6,8 @@ import Destination from "../pages/publicPage/Destination";
 import TourDetails from "../pages/Private/TourDetails";
 import AboutUs from "../pages/publicPage/AboutUs";
 import ContactUs from "../pages/publicPage/ContactUs";
-
+import Blog from "../pages/publicPage/Blog";
+import BlogDetails from "../pages/publicPage/BlogDetails";
 
 export const router = createBrowserRouter([
   {
@@ -26,13 +27,20 @@ export const router = createBrowserRouter([
     loader: () => fetch("/tours.json"),
   },
   {
-     path: "/about",
-  element: <AboutUs></AboutUs>
+    path: "/about",
+    element: <AboutUs></AboutUs>,
   },
   {
-     path: "/contact",
-  element: <ContactUs></ContactUs>
-
+    path: "/contact",
+    element: <ContactUs></ContactUs>,
+  },
+  {
+    path: "/blog",
+    element: <Blog />,
+  },
+  {
+    path: "/blog/:id",
+    element: <BlogDetails />,
   },
   {
     path: "/tour/:id",

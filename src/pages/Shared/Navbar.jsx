@@ -28,7 +28,7 @@ const Navbar = () => {
     { to: "/destination", label: "Destinations" },
     { to: "/about", label: "About Us" },
     { to: "/contact", label: "Contact" },
-  ];
+    { to: "/blog", label: "Blog" },];
 
   const renderLinks = (variant = "desktop") => (
     <ul
