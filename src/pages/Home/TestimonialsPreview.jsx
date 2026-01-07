@@ -34,7 +34,7 @@ const TestimonialsPreview = () => {
     <section className="py-16 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6">
         <div className="text-center mb-10">
-          <span className="text-primary font-medium uppercase tracking-wide text-xs">
+          <span className="text-primary font-medium uppercase tracking-wide text-3xl">
             Testimonials
           </span>
           <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mt-2">

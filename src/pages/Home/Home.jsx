@@ -2,6 +2,7 @@ import React from 'react';
 import Banner from './Banner';
 import PopularDestination from './PopularDestination';
 import HowItWorks from './HowItWorks';
+import TestimonialsPreview from './TestimonialsPreview';
 
 
 const Home = () => {
@@ -10,6 +11,8 @@ const Home = () => {
             <Banner></Banner>
             <PopularDestination></PopularDestination>
             <HowItWorks></HowItWorks>
+            <TestimonialsPreview></TestimonialsPreview>
+            
         </div>
     );
 };
