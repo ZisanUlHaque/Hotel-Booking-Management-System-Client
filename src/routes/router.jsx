@@ -8,6 +8,10 @@ import AboutUs from "../pages/publicPage/AboutUs";
 import ContactUs from "../pages/publicPage/ContactUs";
 import Blog from "../pages/publicPage/Blog";
 import BlogDetails from "../pages/publicPage/BlogDetails";
+import PrivateRoute from "./PrivateRoute";
+import AuthLayout from "../layout/AuthLayout";
+import Register from "../pages/Auth/Register";
+import Login from "../pages/Auth/Login";
 
 export const router = createBrowserRouter([
   {
@@ -20,6 +24,20 @@ export const router = createBrowserRouter([
         loader: () => fetch("/tours.json"),
       },
     ],
+  },
+  {
+    path: "/",
+    Component:AuthLayout,
+    children : [
+      {
+        path: "/register",
+        Component: Register
+      },
+      {
+        path: "/login",
+        Component: Login
+      }
+    ]
   },
   {
     path: "/destination",
@@ -44,7 +62,9 @@ export const router = createBrowserRouter([
   },
   {
     path: "/tour/:id",
-    element: <TourDetails></TourDetails>,
+    element: (<PrivateRoute>
+      <TourDetails></TourDetails>
+    </PrivateRoute>),
     loader: async ({ params }) => {
       const res = await fetch("/tours.json");
       const data = await res.json();
