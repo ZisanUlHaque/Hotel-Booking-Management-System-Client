@@ -75,3 +75,33 @@
   border-radius: 4px;
 }
 
+.marquee-row {
+  animation: marquee-left 28s linear infinite;
+}
+.marquee-row-reverse {
+  animation: marquee-right 32s linear infinite;
+}
+
+/* Hover করলে pause হবে */
+.marquee-row:hover,
+.marquee-row-reverse:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes marquee-right {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}

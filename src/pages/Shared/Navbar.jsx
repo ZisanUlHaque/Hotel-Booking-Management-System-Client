@@ -1,18 +1,20 @@
 import React, { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router";
 import Logo from "../../Components/logo";
+import useAuth from "../../hooks/useAuth";
+import userimg from "../../assets/user.jpg"; // fallback avatar
 
 const Navbar = () => {
-  // const { user, logOut } = useAuth();
-
-  // const handleLogout = () => {
-  //   logOut().catch((error) => {
-  //     console.log(error);
-  //   });
-  // };
+  const { user, logOut } = useAuth(); // user শুরুতে null হতে পারে
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+
+  const handleLogout = () => {
+    logOut().catch((error) => {
+      console.log(error);
+    });
+  };
 
   // Scroll shadow
   useEffect(() => {
@@ -28,7 +30,8 @@ const Navbar = () => {
     { to: "/destination", label: "Destinations" },
     { to: "/about", label: "About Us" },
     { to: "/contact", label: "Contact" },
-    { to: "/blog", label: "Blog" },];
+    { to: "/blog", label: "Blog" },
+  ];
 
   const renderLinks = (variant = "desktop") => (
     <ul
@@ -45,9 +48,7 @@ const Navbar = () => {
             className={({ isActive }) =>
               [
                 "relative text-sm font-medium transition-colors",
-                isActive
-                  ? "text-primary"
-                  : "text-gray-600 hover:text-primary",
+                isActive ? "text-primary" : "text-gray-600 hover:text-primary",
               ].join(" ")
             }
             onClick={() => setIsMenuOpen(false)}
@@ -118,58 +119,38 @@ const Navbar = () => {
           {renderLinks("desktop")}
         </div>
 
-        {/* Right: Actions */}
+        {/* Right: Actions / Auth */}
         <div className="navbar-end">
           <div className="flex items-center gap-3">
-            {/* Search (simple icon placeholder, optional) */}
-            {/* <button className="btn btn-ghost btn-circle hidden sm:inline-flex">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5 text-gray-500"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M21 21l-4.35-4.35M10.5 18a7.5 7.5 0 100-15 7.5 7.5 0 000 15z"
-                />
-              </svg>
-            </button> */}
-
-            {/* Auth buttons (static for now) */}
-            <Link
-              to="/login"
-              className="hidden sm:inline-flex items-center px-3 py-1.5 text-sm 
-                         font-medium text-gray-700 rounded-full border border-gray-300 
-                         hover:border-primary hover:text-primary transition-colors"
-            >
-              Login
-            </Link>
-            <Link
-              to="/register"
-              className="inline-flex items-center px-4 py-2 text-sm font-semibold 
-                         rounded-full bg-primary text-white hover:bg-primary/90 
-                         transition-colors"
-            >
-              Book a Trip
-            </Link>
-
-            {/* Auth logic placeholder */}
-            {/* 
+            {/* যদি user না থাকে */}
             {!user ? (
               <>
-                <Link className="btn btn-sm btn-outline" to="/login">
+                <Link
+                  to="/login"
+                  className="hidden sm:inline-flex items-center px-3 py-1.5 text-sm 
+                             font-medium text-gray-700 rounded-full border border-gray-300 
+                             hover:border-primary hover:text-primary transition-colors"
+                >
                   Login
+                </Link>
+                <Link
+                  to="/register"
+                  className="inline-flex items-center px-4 py-2 text-sm font-semibold 
+                             rounded-full bg-primary text-white hover:bg-primary/90 
+                             transition-colors"
+                >
+                  Book a Trip
                 </Link>
               </>
             ) : (
+              // user থাকলে avatar dropdown
               <div className="dropdown dropdown-end">
                 <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                   <div className="w-10 rounded-full">
-                    <img src={user.photoURL || userimg} alt="User Avatar" />
+                    <img
+                      src={user.photoURL || userimg}
+                      alt="User Avatar"
+                    />
                   </div>
                 </label>
                 <ul
@@ -189,7 +170,6 @@ const Navbar = () => {
                 </ul>
               </div>
             )}
-            */}
           </div>
         </div>
       </div>
@@ -199,6 +179,28 @@ const Navbar = () => {
         <div className="lg:hidden border-t border-gray-200 bg-white">
           <div className="max-w-7xl mx-auto px-4 pb-4">
             {renderLinks("mobile")}
+
+            {/* Mobile auth buttons */}
+            {!user && (
+              <div className="mt-3 flex flex-col gap-2">
+                <Link
+                  to="/login"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="w-full px-3 py-2 text-sm font-medium text-center 
+                             rounded-full border border-gray-300 text-gray-700"
+                >
+                  Login
+                </Link>
+                <Link
+                  to="/register"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="w-full px-3 py-2 text-sm font-semibold text-center 
+                             rounded-full bg-primary text-white"
+                >
+                  Book a Trip
+                </Link>
+              </div>
+            )}
           </div>
         </div>
       )}
