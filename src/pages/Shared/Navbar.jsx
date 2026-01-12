@@ -1,3 +1,4 @@
+// src/Shared/Navbar.jsx
 import React, { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router";
 import Logo from "../../Components/logo";
@@ -5,7 +6,7 @@ import useAuth from "../../hooks/useAuth";
 import userimg from "../../assets/user.jpg"; // fallback avatar
 
 const Navbar = () => {
-  const { user, logOut } = useAuth(); // user শুরুতে null হতে পারে
+  const { user, logOut } = useAuth();
 
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -64,6 +65,31 @@ const Navbar = () => {
           </NavLink>
         </li>
       ))}
+
+      {/* 🔹 User logged in থাকলে Dashboard link (desktop + mobile দুই জায়গাতেই কাজ করবে) */}
+      {user && (
+        <li>
+          <NavLink
+            to="/dashboard"
+            className={({ isActive }) =>
+              [
+                "relative text-sm font-medium transition-colors",
+                isActive ? "text-primary" : "text-gray-600 hover:text-primary",
+              ].join(" ")
+            }
+            onClick={() => setIsMenuOpen(false)}
+          >
+            {({ isActive }) => (
+              <span className="inline-flex flex-col items-start">
+                <span>Dashboard</span>
+                {isActive && (
+                  <span className="mt-1 h-0.5 w-6 rounded-full bg-primary" />
+                )}
+              </span>
+            )}
+          </NavLink>
+        </li>
+      )}
     </ul>
   );
 
@@ -122,7 +148,6 @@ const Navbar = () => {
         {/* Right: Actions / Auth */}
         <div className="navbar-end">
           <div className="flex items-center gap-3">
-            {/* যদি user না থাকে */}
             {!user ? (
               <>
                 <Link
@@ -133,6 +158,7 @@ const Navbar = () => {
                 >
                   Login
                 </Link>
+
                 <Link
                   to="/register"
                   className="inline-flex items-center px-4 py-2 text-sm font-semibold 
@@ -145,8 +171,11 @@ const Navbar = () => {
             ) : (
               // user থাকলে avatar dropdown
               <div className="dropdown dropdown-end">
-                <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-                  <div className="w-10 rounded-full">
+                <label
+                  tabIndex={0}
+                  className="btn btn-ghost btn-circle avatar"
+                >
+                  <div className="w-10 rounded-full overflow-hidden">
                     <img
                       src={user.photoURL || userimg}
                       alt="User Avatar"

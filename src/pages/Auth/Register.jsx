@@ -101,8 +101,7 @@ const Register = () => {
         travelStyle: data.travelStyle || "",
       };
 
-      const baseURL =
-        import.meta.env.VITE_API_URL || "https://your-api-url.com";
+      const baseURL = import.meta.env.VITE_API_URL || "http://localhost:3000";
 
       // যদি backend থাকে তখনই চালাও
       try {

@@ -12,6 +12,14 @@ import PrivateRoute from "./PrivateRoute";
 import AuthLayout from "../layout/AuthLayout";
 import Register from "../pages/Auth/Register";
 import Login from "../pages/Auth/Login";
+import MyBooking from "../pages/Dashboard/MyBooking";
+import DashboardLayout from "../layout/DashboardLayout";
+import PaymentSuccess from "../pages/Dashboard/PaymentSuccess";
+import AdminRoute from "./AdminRoute";
+import ManageUsers from "../pages/Dashboard/Admin/ManageUsers";
+import ManageBookings from "../pages/Dashboard/Admin/ManageBookings";
+import UserProfile from "../pages/Dashboard/UserProfile";
+import DashboardHome from "../pages/Dashboard/DashboardHome";
 
 export const router = createBrowserRouter([
   {
@@ -27,17 +35,77 @@ export const router = createBrowserRouter([
   },
   {
     path: "/",
-    Component:AuthLayout,
-    children : [
+    Component: AuthLayout,
+    children: [
       {
         path: "/register",
-        Component: Register
+        Component: Register,
       },
       {
         path: "/login",
-        Component: Login
-      }
-    ]
+        Component: Login,
+      },
+    ],
+  },
+  // router.jsx এ
+  {
+    path: "/dashboard",
+    element: (
+      <PrivateRoute>
+        <DashboardLayout></DashboardLayout>
+      </PrivateRoute>
+    ),
+    children: [
+      {
+path:'/dashboard',
+Component: DashboardHome
+      },
+      {
+        path: "my-booking",
+        Component: MyBooking,
+      },
+          {
+      path: "profile",
+      Component: UserProfile,
+    },
+    ],
+  },
+
+
+{
+  path: "/dashboard",
+  element: (
+    <PrivateRoute>
+      <DashboardLayout />
+    </PrivateRoute>
+  ),
+  children: [
+    // user routes...
+    {
+      path: "all-bookings",
+      element: (
+        <AdminRoute>
+          <ManageBookings/>
+        </AdminRoute>
+      ),
+    },
+    {
+      path: "users",
+      element: (
+        <AdminRoute>
+          <ManageUsers />
+        </AdminRoute>
+      ),
+    },
+  ],
+},
+  {
+    path: "/payment-success",
+    element: <PaymentSuccess />,
+  },
+  {
+    path: "/payment-cancelled",
+    element: <div className="p-10 text-center">Payment cancelled.</div>,
   },
   {
     path: "/destination",
@@ -62,9 +130,11 @@ export const router = createBrowserRouter([
   },
   {
     path: "/tour/:id",
-    element: (<PrivateRoute>
-      <TourDetails></TourDetails>
-    </PrivateRoute>),
+    element: (
+      <PrivateRoute>
+        <TourDetails></TourDetails>
+      </PrivateRoute>
+    ),
     loader: async ({ params }) => {
       const res = await fetch("/tours.json");
       const data = await res.json();
