@@ -95,8 +95,10 @@ const UserProfile = () => {
 
   if (!profile) {
     return (
-      <div className="min-h-[400px] flex items-center justify-center">
-        <span className="loading loading-spinner loading-lg text-primary" />
+      <div class="flex justify-center items-center h-screen">
+        <div class="animate-spin ease-linear rounded-full w-10 h-10 border-t-2 border-b-2 border-purple-500"></div>
+        <div class="animate-spin ease-linear rounded-full w-10 h-10 border-t-2 border-b-2 border-red-500 ml-3"></div>
+        <div class="animate-spin ease-linear rounded-full w-10 h-10 border-t-2 border-b-2 border-blue-500 ml-3"></div>
       </div>
     );
   }
@@ -167,9 +169,7 @@ const UserProfile = () => {
               <h1 className="text-2xl font-bold">
                 {profile.name || "Welcome!"}
               </h1>
-              <p className="text-white/80">
-                {profile.email || user.email}
-              </p>
+              <p className="text-white/80">{profile.email || user.email}</p>
               {profile.role === "admin" && (
                 <span className="inline-block mt-2 px-3 py-1 bg-white/20 backdrop-blur rounded-full text-xs font-medium">
                   Administrator

@@ -1,23 +1,27 @@
-import React from 'react';
+import React from "react";
 
-import { Navigate, useLocation } from 'react-router';
-import useAuth from '../hooks/useAuth';
+import { Navigate, useLocation } from "react-router";
+import useAuth from "../hooks/useAuth";
 
 const PrivateRoute = ({ children }) => {
-    const { user, loading } = useAuth();
-    const location = useLocation();
-    
-    if (loading) {
-        return <div>
-            <span className="loading loading-infinity loading-xl"></span>
+  const { user, loading } = useAuth();
+  const location = useLocation();
+
+  if (loading) {
+    return (
+      <div class="flex-col gap-4 w-full flex items-center justify-center">
+        <div class="w-20 h-20 border-4 border-transparent text-blue-400 text-4xl animate-spin flex items-center justify-center border-t-blue-400 rounded-full">
+          <div class="w-16 h-16 border-4 border-transparent text-red-400 text-2xl animate-spin flex items-center justify-center border-t-red-400 rounded-full"></div>
         </div>
-    }
+      </div>
+    );
+  }
 
-    if(!user){
-        return <Navigate state={location.pathname} to="/login"></Navigate>
-    }
+  if (!user) {
+    return <Navigate state={location.pathname} to="/login"></Navigate>;
+  }
 
-    return children;
+  return children;
 };
 
 export default PrivateRoute;

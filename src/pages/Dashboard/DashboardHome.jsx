@@ -3,6 +3,7 @@ import React from "react";
 import useAuth from "../../hooks/useAuth";
 import useAxiosSecure from "../../hooks/useAxiosSecure";
 import useAdmin from "../../hooks/useAdmin";
+
 import { useQuery } from "@tanstack/react-query";
 import {
   BarChart,
@@ -25,10 +26,7 @@ const DashboardHome = () => {
   const [isAdmin] = useAdmin();
 
   // Admin stats
-  const {
-    data: adminStats,
-    isLoading: adminLoading,
-  } = useQuery({
+  const { data: adminStats, isLoading: adminLoading } = useQuery({
     queryKey: ["dashboard-stats"],
     enabled: isAdmin,
     queryFn: async () => {
@@ -38,10 +36,7 @@ const DashboardHome = () => {
   });
 
   // User bookings
-  const {
-    data: userBookings = [],
-    isLoading: userLoading,
-  } = useQuery({
+  const { data: userBookings = [], isLoading: userLoading } = useQuery({
     queryKey: ["dashboard-user-bookings", user?.email],
     enabled: !isAdmin && !!user?.email,
     queryFn: async () => {
@@ -52,19 +47,20 @@ const DashboardHome = () => {
     },
   });
 
+
   if (isAdmin && adminLoading) {
     return (
-      <div className="min-h-[300px] flex items-center justify-center">
-        <span className="loading loading-spinner loading-lg text-primary" />
-      </div>
-    );
-  }
 
-  if (!isAdmin && userLoading) {
-    return (
-      <div className="min-h-[300px] flex items-center justify-center">
-        <span className="loading loading-spinner loading-lg text-primary" />
-      </div>
+<div class="flex-col gap-4 w-full flex items-center justify-center">
+  <div
+    class="w-20 h-20 border-4 border-transparent text-blue-400 text-4xl animate-spin flex items-center justify-center border-t-blue-400 rounded-full"
+  >
+    <div
+      class="w-16 h-16 border-4 border-transparent text-red-400 text-2xl animate-spin flex items-center justify-center border-t-red-400 rounded-full"
+    ></div>
+  </div>
+</div>
+
     );
   }
 
@@ -73,9 +69,7 @@ const DashboardHome = () => {
   /* ---------------------- USER DASHBOARD VIEW ---------------------- */
   if (!isAdmin) {
     const total = userBookings.length;
-    const paid = userBookings.filter(
-      (b) => b.paymentStatus === "paid"
-    ).length;
+    const paid = userBookings.filter((b) => b.paymentStatus === "paid").length;
     const upcoming = userBookings.filter((b) => {
       if (!b.travelDate) return false;
       const d = new Date(b.travelDate);
@@ -92,9 +86,7 @@ const DashboardHome = () => {
       <div className="p-6 space-y-6">
         {/* Welcome Banner */}
         <div className="bg-gradient-to-r from-primary to-primary/80 rounded-2xl p-6 text-white">
-          <h1 className="text-2xl font-bold">
-            Welcome back, {firstName}! 👋
-          </h1>
+          <h1 className="text-2xl font-bold">Welcome back, {firstName}! 👋</h1>
           <p className="opacity-90 mt-1">
             Here’s a quick overview of your trips and bookings.
           </p>
@@ -145,12 +137,9 @@ const DashboardHome = () => {
                   className="px-4 py-3 flex items-center justify-between hover:bg-gray-50 text-sm"
                 >
                   <div>
-                    <p className="font-medium text-gray-800">
-                      {b.tourTitle}
-                    </p>
+                    <p className="font-medium text-gray-800">{b.tourTitle}</p>
                     <p className="text-xs text-gray-500">
-                      {b.travelDate} •{" "}
-                      {b.guests || b.numberOfGuests} guest(s)
+                      {b.travelDate} • {b.guests || b.numberOfGuests} guest(s)
                     </p>
                   </div>
                   <div className="text-right">
@@ -201,9 +190,7 @@ const DashboardHome = () => {
     <div className="p-6 space-y-6">
       {/* Welcome Banner */}
       <div className="bg-gradient-to-r from-primary to-primary/80 rounded-2xl p-6 text-white">
-        <h1 className="text-2xl font-bold">
-          Welcome back, {firstName}! 👋
-        </h1>
+        <h1 className="text-2xl font-bold">Welcome back, {firstName}! 👋</h1>
         <p className="opacity-90 mt-1">
           Here’s what’s happening across the platform today.
         </p>
@@ -231,9 +218,7 @@ const DashboardHome = () => {
         />
         <StatCard
           title="Revenue"
-          value={`$${(
-            (stats.totalRevenue || 0) / 100
-          ).toLocaleString()}`}
+          value={`$${((stats.totalRevenue || 0) / 100).toLocaleString()}`}
           icon="💰"
           color="bg-purple-50"
         />
@@ -244,9 +229,7 @@ const DashboardHome = () => {
         {/* Booking Chart */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
           <div className="flex justify-between items-center mb-4">
-            <h2 className="text-lg font-semibold">
-              Bookings (Last 6 Months)
-            </h2>
+            <h2 className="text-lg font-semibold">Bookings (Last 6 Months)</h2>
           </div>
           <div className="h-64">
             <ResponsiveContainer width="100%" height="100%">
@@ -255,11 +238,7 @@ const DashboardHome = () => {
                 <XAxis dataKey="name" />
                 <YAxis allowDecimals={false} />
                 <Tooltip />
-                <Bar
-                  dataKey="bookings"
-                  fill="#6366f1"
-                  radius={[4, 4, 0, 0]}
-                />
+                <Bar dataKey="bookings" fill="#6366f1" radius={[4, 4, 0, 0]} />
               </BarChart>
             </ResponsiveContainer>
           </div>
@@ -267,9 +246,7 @@ const DashboardHome = () => {
 
         {/* Status Distribution */}
         <div className="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
-          <h2 className="text-lg font-semibold mb-4">
-            Booking Status
-          </h2>
+          <h2 className="text-lg font-semibold mb-4">Booking Status</h2>
           <div className="h-64 flex items-center justify-center">
             <ResponsiveContainer width="100%" height="100%">
               <PieChart>
@@ -298,10 +275,7 @@ const DashboardHome = () => {
           </div>
           <div className="flex justify-center gap-4 mt-4">
             {statusData.map((entry, index) => (
-              <div
-                key={entry.name}
-                className="flex items-center gap-2 text-sm"
-              >
+              <div key={entry.name} className="flex items-center gap-2 text-sm">
                 <div
                   className="w-3 h-3 rounded-full"
                   style={{ backgroundColor: COLORS[index] }}
@@ -333,13 +307,8 @@ const DashboardHome = () => {
             </thead>
             <tbody className="divide-y divide-gray-100">
               {(stats.recentBookings || []).map((b) => (
-                <tr
-                  key={b._id}
-                  className="hover:bg-gray-50 transition-colors"
-                >
-                  <td className="px-6 py-4 font-medium">
-                    {b.tourTitle}
-                  </td>
+                <tr key={b._id} className="hover:bg-gray-50 transition-colors">
+                  <td className="px-6 py-4 font-medium">{b.tourTitle}</td>
                   <td className="px-6 py-4">{b.userEmail}</td>
                   <td className="px-6 py-4">{b.travelDate}</td>
                   <td className="px-6 py-4 font-semibold">

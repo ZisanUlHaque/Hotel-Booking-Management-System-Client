@@ -154,15 +154,15 @@ const MyBooking = () => {
 
   if (loading || isLoading) {
     return (
-      <div className="min-h-[400px] flex items-center justify-center">
-        <span className="loading loading-spinner loading-lg text-primary" />
+      <div class="flex-col gap-4 w-full flex items-center justify-center">
+        <div class="w-20 h-20 border-4 border-transparent text-blue-400 text-4xl animate-spin flex items-center justify-center border-t-blue-400 rounded-full">
+          <div class="w-16 h-16 border-4 border-transparent text-red-400 text-2xl animate-spin flex items-center justify-center border-t-red-400 rounded-full"></div>
+        </div>
       </div>
     );
   }
 
-  const paidCount = bookings.filter(
-    (b) => b.paymentStatus === "paid"
-  ).length;
+  const paidCount = bookings.filter((b) => b.paymentStatus === "paid").length;
   const confirmedCount = bookings.filter(
     (b) => b.status === "confirmed"
   ).length;
@@ -172,12 +172,9 @@ const MyBooking = () => {
     <div className="space-y-6">
       {/* Header summary */}
       <div className="flex justify-between items-center">
-        <h2 className="text-2xl font-bold">
-          My Bookings ({bookings.length})
-        </h2>
+        <h2 className="text-2xl font-bold">My Bookings ({bookings.length})</h2>
         <div className="text-sm text-gray-500 space-x-2">
-          <span>{paidCount} paid</span>•
-          <span>{confirmedCount} confirmed</span>•
+          <span>{paidCount} paid</span>•<span>{confirmedCount} confirmed</span>•
           <span className="text-green-600 font-semibold">
             {completedCount} completed
           </span>
@@ -255,9 +252,7 @@ const MyBooking = () => {
                             : "bg-gray-100 text-gray-700"
                         }`}
                       >
-                        {booking.paymentStatus === "paid"
-                          ? "✓ Paid"
-                          : "Unpaid"}
+                        {booking.paymentStatus === "paid" ? "✓ Paid" : "Unpaid"}
                       </span>
                       {completed && (
                         <span className="px-3 py-1 rounded-full text-xs font-medium bg-emerald-100 text-emerald-700">
@@ -270,9 +265,7 @@ const MyBooking = () => {
                   <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 text-sm">
                     <div>
                       <p className="text-gray-500">Travel Date</p>
-                      <p className="font-medium">
-                        📅 {booking.travelDate}
-                      </p>
+                      <p className="font-medium">📅 {booking.travelDate}</p>
                     </div>
                     <div>
                       <p className="text-gray-500">Guests</p>
@@ -290,9 +283,7 @@ const MyBooking = () => {
                       <p className="text-gray-500">Booked On</p>
                       <p className="font-medium">
                         {booking.createdAt
-                          ? new Date(
-                              booking.createdAt
-                            ).toLocaleDateString()
+                          ? new Date(booking.createdAt).toLocaleDateString()
                           : "-"}
                       </p>
                     </div>
@@ -347,15 +338,14 @@ const MyBooking = () => {
                       )}
 
                     {/* Cancel Booking – not cancelled & not completed */}
-                    {!completed &&
-                      booking.status !== "cancelled" && (
-                        <button
-                          onClick={() => cancelBooking(booking)}
-                          className="btn btn-ghost btn-sm text-error"
-                        >
-                          Cancel Booking
-                        </button>
-                      )}
+                    {!completed && booking.status !== "cancelled" && (
+                      <button
+                        onClick={() => cancelBooking(booking)}
+                        className="btn btn-ghost btn-sm text-error"
+                      >
+                        Cancel Booking
+                      </button>
+                    )}
 
                     {completed && (
                       <div className="text-sm text-emerald-600">
@@ -390,9 +380,7 @@ const MyBooking = () => {
                 d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2H9m0-2h6a2 2 0 012 2v2M9 3a2 2 0 012-2h2a2 2 0 012 2"
               />
             </svg>
-            <p className="text-gray-500 mb-4">
-              You have no bookings yet.
-            </p>
+            <p className="text-gray-500 mb-4">You have no bookings yet.</p>
             <a href="/destination" className="btn btn-primary">
               Browse Tours
             </a>
