@@ -9,7 +9,7 @@ const PaymentSuccess = () => {
   const [data, setData] = useState(null);
 
   const baseURL =
-    import.meta.env.VITE_API_URL || "http://localhost:3000";
+    import.meta.env.VITE_API_URL || "https://hotel-booking-management-system-ser.vercel.app";
 
   useEffect(() => {
     const params = new URLSearchParams(location.search);

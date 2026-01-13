@@ -101,7 +101,7 @@ const Register = () => {
         travelStyle: data.travelStyle || "",
       };
 
-      const baseURL = import.meta.env.VITE_API_URL || "http://localhost:3000";
+      const baseURL = import.meta.env.VITE_API_URL || "https://hotel-booking-management-system-ser.vercel.app";
 
       // যদি backend থাকে তখনই চালাও
       try {

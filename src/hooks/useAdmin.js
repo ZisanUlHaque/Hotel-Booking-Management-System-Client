@@ -8,7 +8,7 @@ const useAdmin = () => {
   const [adminLoading, setAdminLoading] = useState(true);
 
   const baseURL =
-    import.meta.env.VITE_API_URL || "http://localhost:3000";
+    import.meta.env.VITE_API_URL || "https://hotel-booking-management-system-ser.vercel.app";
 
   useEffect(() => {
     if (!user?.email || loading) return;
