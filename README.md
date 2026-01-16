@@ -6,7 +6,7 @@ Key Highlights:
 👤 Profile – editable info + real stats (total bookings, completed trips, member since)
 
 📊 Dashboard –
-User: My Bookings, Profile
+User: My Bookings, Profile.
 Admin: Analytics (real API data), Manage Bookings, Manage Users
 Stack: React, React Router, React Query, Tailwind + DaisyUI, Firebase Auth, Node.js, Express, MongoDB, Stripe Checkout
 
